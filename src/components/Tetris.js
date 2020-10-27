@@ -1,12 +1,15 @@
-import React from "react";
+import React from 'react'
 
-import Display from "./Display";
-import Stage from "./Stage";
-import StartButton from "./StartButton";
+import { createStage } from '../gameHelpers'
+
+// Components
+import Display from './Display'
+import Stage from './Stage'
+import StartButton from './StartButton'
 
 const Tetris = () => (
   <div>
-    <Stage />
+    <Stage stage={createStage()} />
     <aside>
       <div>
         <Display text="Score" />
@@ -16,6 +19,6 @@ const Tetris = () => (
       <StartButton />
     </aside>
   </div>
-);
+)
 
-export default Tetris;
+export default Tetris
